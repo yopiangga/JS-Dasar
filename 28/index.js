@@ -1,18 +1,7 @@
 
 
-var sKubusA = 8;
-var sKubusB = 3;
-
 function volumeKubus(sisi){
-    var volume;
-    volume = sisi * sisi * sisi;
-
-    return volume;
+    return sisi * sisi * sisi;
 }
 
-var vKubusA = volumeKubus(sKubusA);
-var vKubusB = volumeKubus(sKubusB);
-
-var totalVolume = vKubusA + vKubusB;
-
-console.log(totalVolume);
+console.log((volumeKubus(3) + volumeKubus(8)));
