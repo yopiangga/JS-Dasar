@@ -28,10 +28,26 @@ function tambahPenumpang(nama){
 }
 
 function hapusPenumpang(nama){
-    penumpang.forEach(function(e, i){
-        if(e == nama){
-            delete penumpang[i];
-            return;
+    var orang;
+    var kosong = 0;
+    for(var i = 0; i<penumpang.length; i++){
+        if(penumpang[i] == undefined || penumpang[i] == null){
+            kosong = kosong + 1;
         }
-    })
+    }
+
+    orang = penumpang.length - kosong;
+    
+    if(orang == 0){
+        console.log("Penumpang masih kosong");
+    } else {
+        penumpang.forEach(function(e, i){
+            if(e == nama){
+                delete penumpang[i];
+                return;
+            } else {
+                console.log("Nama penumpang salah");
+            }
+        })
+    }
 }
