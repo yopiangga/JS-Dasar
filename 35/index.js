@@ -8,4 +8,12 @@ students = [
     ["003", "Yopiangga3", "D4 TIC", "KK"],
 ];
 
-console.log(students[1][1]);
+// for(var i=0; i<students.length; i++){
+//     for(var j=0; j<4; j++){
+//         console.log(students[i][j] + " ");
+//     }
+// }
+
+for(var i=0; i<students.length; i++){
+    console.log(students[i].join());
+}
